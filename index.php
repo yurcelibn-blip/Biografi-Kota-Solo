@@ -117,11 +117,11 @@
     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
       <div class="carousel-inner">
         <?php
-        // Pastikan koneksi sudah di-include sebelumnya
+        
         $sql = "SELECT * FROM gallery ORDER BY tanggal DESC";
         $hasil = $conn->query($sql);
         
-        $active = "active"; // Class active hanya untuk item pertama
+        $active = "active"; 
         
         if ($hasil->num_rows > 0) {
             while ($row = $hasil->fetch_assoc()) {
@@ -133,10 +133,10 @@
                 </div>
             </div>
         <?php
-                $active = ""; // Hapus class active untuk item selanjutnya
+                $active = ""; 
             }
         } else {
-            // Tampilan default jika belum ada data di database
+            
             echo '<div class="carousel-item active">
                     <img src="https://via.placeholder.com/1200x500?text=Belum+Ada+Gallery" class="d-block w-100" alt="Placeholder">
                   </div>';
@@ -374,4 +374,5 @@
         }
     </script>
 </body>
+
 </html>
