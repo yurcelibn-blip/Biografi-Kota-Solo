@@ -1,17 +1,17 @@
 <?php
 include "koneksi.php";
 
-// Ambil jumlah artikel
+
 $sql_article = "SELECT * FROM article";
 $result_article = $conn->query($sql_article);
 $total_article = $result_article ? $result_article->num_rows : 0;
 
-// Ambil jumlah gallery
+
 $sql_gallery = "SELECT * FROM gallery";
 $result_gallery = $conn->query($sql_gallery);
 $total_gallery = $result_gallery ? $result_gallery->num_rows : 0;
 
-// Ambil foto profil user yang sedang login
+
 $username = $_SESSION['username'];
 $sql_user = "SELECT foto FROM user WHERE username = '$username'";
 $result_user = $conn->query($sql_user);
@@ -68,4 +68,5 @@ $user_data = $result_user->fetch_assoc();
             </div>
         </div>
     </div>
+
 </div>
