@@ -5,9 +5,7 @@ if (!function_exists('upload_foto')) {
     include "upload_foto.php";
 }
 
-// --- LOGIKA CRUD (TETAP SAMA SEPERTI SEBELUMNYA) ---
-// (Simpan, Update, Hapus tetap di sini)
-// ... [kode logika simpan/update/hapus Anda] ...
+
 ?>
 
 <div class="container">
@@ -86,4 +84,5 @@ $(document).ready(function(){
         loadData(keyword);
     });
 });
+
 </script>
